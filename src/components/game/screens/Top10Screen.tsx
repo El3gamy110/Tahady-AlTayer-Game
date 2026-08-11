@@ -142,7 +142,7 @@ export function Top10Screen() {
         description={
           pendingIndex !== null
             ? `${list.items[pendingIndex]} — المركز ${pendingIndex + 1} (+${pendingIndex + 1})`
-            : undefined
+            : ""
         }
         cancelLabel="من غير نقاط"
         onCancel={() => {
