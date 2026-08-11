@@ -1,24 +1,64 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { GameProvider, useGame } from "@/game/store";
+import { HomeScreen } from "@/components/game/screens/HomeScreen";
+import { SetupScreen } from "@/components/game/screens/SetupScreen";
+import { SectionSelectScreen } from "@/components/game/screens/SectionSelectScreen";
+import { TriviaScreen } from "@/components/game/screens/TriviaScreen";
+import { JudgedQuestionsScreen } from "@/components/game/screens/JudgedQuestionsScreen";
+import { Top10Screen } from "@/components/game/screens/Top10Screen";
+import { RoundResultScreen, FinalResultScreen } from "@/components/game/screens/ResultScreens";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "تحدي عالطاير — لعبة مسابقات مصرية للسهرات" },
+      {
+        name: "description",
+        content:
+          "تحدي عالطاير: لعبة مسابقات عربية يديرها حكم واحد لـ ٢ إلى ٨ لاعبين، بأربع فقرات ونقاط فورية.",
+      },
+      { property: "og:title", content: "تحدي عالطاير — لعبة مسابقات مصرية" },
+      {
+        property: "og:description",
+        content: "أربع فقرات، حكم واحد، ومن ٢ لـ ٨ لاعبين. العب دلوقتي من غير حسابات.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+function Screens() {
+  const { screen } = useGame();
+  switch (screen) {
+    case "setup":
+      return <SetupScreen />;
+    case "sections":
+      return <SectionSelectScreen />;
+    case "trivia":
+      return <TriviaScreen />;
+    case "closest":
+      return <JudgedQuestionsScreen mode="closest" />;
+    case "different":
+      return <JudgedQuestionsScreen mode="different" />;
+    case "top10":
+      return <Top10Screen />;
+    case "round":
+      return <RoundResultScreen />;
+    case "final":
+      return <FinalResultScreen />;
+    default:
+      return <HomeScreen />;
+  }
+}
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <GameProvider>
+      <main dir="rtl" className="relative min-h-screen overflow-hidden">
+        <Screens />
+      </main>
+    </GameProvider>
   );
 }
