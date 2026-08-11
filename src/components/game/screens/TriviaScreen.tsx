@@ -77,7 +77,7 @@ export function TriviaScreen() {
                           setSelected({ cat: ci, diff: d });
                         }}
                         className={cn(
-                          "card-surface w-full py-6 text-3xl font-extrabold transition-all duration-200",
+                          "card-surface w-full py-6 text-2xl sm:text-3xl font-extrabold transition-all duration-200",
                           used
                             ? "opacity-30"
                             : "text-primary hover:-translate-y-1 hover:border-primary hover:shadow-[var(--shadow-glow)]",
@@ -174,7 +174,7 @@ function QuestionView({
           الدور على: <span className="font-bold text-foreground">{player?.name ?? "—"}</span>
         </p>
 
-        <h2 className="mt-6 text-3xl font-extrabold leading-snug">{q.question}</h2>
+        <h2 className="mt-6 text-2xl sm:text-3xl font-extrabold leading-snug">{q.question}</h2>
 
         <div className="mt-6 flex items-center gap-4">
           {!started ? (

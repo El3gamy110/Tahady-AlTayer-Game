@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Tahady Al Tayer</string>
+    <string name="title_activity_main">Tahady Al Tayer</string>
+    <string name="package_name">com.lovable.tahadyaltayer</string>
+    <string name="custom_url_scheme">com.lovable.tahadyaltayer</string>
+</resources>

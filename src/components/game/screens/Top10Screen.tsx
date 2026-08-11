@@ -31,7 +31,7 @@ export function Top10Screen() {
   if (!top10.started) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-20 text-center">
-        <h2 className="text-5xl font-extrabold">🔢 الواحد ربك هو الواحد</h2>
+        <h2 className="text-3xl sm:text-5xl font-extrabold">🔢 الواحد ربك هو الواحد</h2>
         <p className="mt-4 text-xl text-muted-foreground">
           الجولة {top10.listIndex + 1} / {top10.lists.length}
         </p>
@@ -77,7 +77,7 @@ export function Top10Screen() {
 
       <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
         <div className="card-surface p-6">
-          <h2 className="text-3xl font-extrabold">{list.title}</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold">{list.title}</h2>
 
           <ol className="mt-6 space-y-2">
             {list.items.map((item, i) => (

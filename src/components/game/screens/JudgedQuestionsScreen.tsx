@@ -62,7 +62,7 @@ export function JudgedQuestionsScreen({ mode }: { mode: "closest" | "different" 
 
           <div className="card-surface animate-pop-in p-8" key={state.index}>
             <p className="text-sm text-muted-foreground">{hint}</p>
-            <h2 className="mt-6 text-4xl font-extrabold leading-snug">{current?.question}</h2>
+            <h2 className="mt-6 text-2xl sm:text-4xl font-extrabold leading-snug">{current?.question}</h2>
 
             {mode === "closest" && current && "answer" in current ? (
               <div className="mt-8">
