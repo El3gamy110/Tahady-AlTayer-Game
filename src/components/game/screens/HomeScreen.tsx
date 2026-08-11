@@ -10,13 +10,13 @@ export function HomeScreen() {
     <div className="flex min-h-screen flex-col items-center justify-center px-4 text-center">
       <div className="stage-pattern absolute inset-0 -z-10 opacity-60" aria-hidden />
       <p className="mb-4 rounded-full border border-primary/40 px-4 py-1 text-sm text-primary">
-        لعبة مسابقات مصرية بيديرها حكم واحد
+       فكّر بسرعة... والعب عالطاير!
       </p>
       <h1 className="text-gold-gradient text-6xl font-extrabold leading-tight sm:text-7xl">
         تحدي عالطاير
       </h1>
       <p className="mt-4 max-w-md text-lg text-muted-foreground">
-        أربع فقرات، من ٢ لـ ٨ لاعبين، وحكم واحد بيمسك اللعبة كلها.
+       تحدي عالطاير:  حكم واحد، بأربع جولات ، كل جولة... تحدي جديد!
       </p>
 
       <div className="mt-10 flex flex-col items-center gap-3">
