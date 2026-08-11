@@ -11,16 +11,16 @@ import { RoundResultScreen, FinalResultScreen } from "@/components/game/screens/
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "تحدي عالطاير — لعبة مسابقات مصرية للسهرات" },
+      { title: "تحدي عالطاير" },
       {
         name: "description",
         content:
-          "تحدي عالطاير: لعبة مسابقات عربية يديرها حكم واحد لـ ٢ إلى ٨ لاعبين، بأربع فقرات ونقاط فورية.",
+          "فكّر بسرعة... والعب عالطاير!",
       },
-      { property: "og:title", content: "تحدي عالطاير — لعبة مسابقات مصرية" },
+      { property: "og:title", content: "تحدي عالطاير" },
       {
         property: "og:description",
-        content: "أربع فقرات، حكم واحد، ومن ٢ لـ ٨ لاعبين. العب دلوقتي من غير حسابات.",
+        content: "تحدي عالطاير:  حكم واحد، بأربع جولات ، كل جولة... تحدي جديد!",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
