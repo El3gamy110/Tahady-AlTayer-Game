@@ -1,14 +1,1344 @@
 {
+  "section": {
+    "name": "🎯 مين أقرب؟",
+    "description": "أسئلة رقمية بدون اختيارات. كل لاعب يكتب رقمًا واحدًا. الإجابة المطابقة تمامًا تحصل على نقطتين، وإذا لم يطابق أحد الإجابة فالأقرب يحصل على نقطة واحدة.",
+    "rules": {
+      "exact_answer_points": 2,
+      "closest_answer_if_no_exact_points": 1,
+      "everyone_else_points": 0,
+      "tie_on_exact": "كل من يجيب الإجابة الصحيحة بالضبط يحصل على نقطتين.",
+      "tie_on_closest": "إذا لم توجد إجابة صحيحة بالضبط وتعادل لاعبان في أقرب إجابة، يحصل كل منهما على نقطة."
+    },
+    "answer_format": "number",
+    "note": "لأسئلة السنوات، الإجابة سنة صحيحة. لأسئلة القياس، الوحدة موضحة في unit."
+  },
+  "questions_count": 93,
   "questions": [
-    { "question": "كام برج في مدينة نصر أطول من 20 دور؟ الأقرب يكسب", "answer": "غير محدد" },
-    { "question": "طول نهر النيل بالكيلومتر؟", "answer": "6650" },
-    { "question": "عدد سكان مصر بالمليون تقريبًا؟", "answer": "107" },
-    { "question": "كام أهرام موجود في الجيزة؟", "answer": "9" },
-    { "question": "درجة غليان الماء بالفهرنهايت؟", "answer": "212" },
-    { "question": "سنة تأسيس النادي الأهلي؟", "answer": "1907" },
-    { "question": "المسافة بين القاهرة والإسكندرية بالكيلومتر؟", "answer": "220" },
-    { "question": "عدد دول قارة أفريقيا؟", "answer": "54" },
-    { "question": "كام دقيقة في الأسبوع؟", "answer": "10080" },
-    { "question": "ارتفاع برج القاهرة بالمتر؟", "answer": "187" }
-  ]
+    {
+      "id": "num_001",
+      "category": "🇪🇬 مصر",
+      "question": "في أي سنة تم افتتاح قناة السويس لأول مرة؟",
+      "answer": 1869,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_002",
+      "category": "🇪🇬 مصر",
+      "question": "كم عدد محافظات مصر؟",
+      "answer": 27,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_003",
+      "category": "🇪🇬 مصر",
+      "question": "كم عدد أهرامات الجيزة الرئيسية؟",
+      "answer": 3,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_004",
+      "category": "🇪🇬 مصر",
+      "question": "كم يبلغ ارتفاع الهرم الأكبر الأصلي تقريبًا بالمتر؟",
+      "answer": 146.5,
+      "unit": "meters",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_005",
+      "category": "🇪🇬 مصر",
+      "question": "في أي سنة تم اكتشاف مقبرة توت عنخ آمون؟",
+      "answer": 1922,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_006",
+      "category": "🇪🇬 مصر",
+      "question": "في أي سنة اكتمل بناء السد العالي في أسوان؟",
+      "answer": 1970,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_007",
+      "category": "🇪🇬 مصر",
+      "question": "كم يبلغ طول قناة السويس تقريبًا بالكيلومتر؟",
+      "answer": 193.3,
+      "unit": "km",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_008",
+      "category": "🇪🇬 مصر",
+      "question": "كم يبلغ طول نهر النيل تقريبًا بالكيلومتر؟",
+      "answer": 6650,
+      "unit": "km",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_009",
+      "category": "🇪🇬 مصر",
+      "question": "في أي سنة تأسست مدينة القاهرة؟",
+      "answer": 969,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_010",
+      "category": "🇪🇬 مصر",
+      "question": "في أي سنة بدأ تشغيل مترو القاهرة؟",
+      "answer": 1987,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_011",
+      "category": "🇪🇬 مصر",
+      "question": "كم عدد خطوط مترو القاهرة التي كانت تعمل فعليًا حتى 2026؟",
+      "answer": 3,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "note": "الخطوط 1 و2 و3؛ الخط الرابع ليس ضمن الخطوط العاملة.",
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_012",
+      "category": "🇪🇬 مصر",
+      "question": "كم يبلغ ارتفاع برج القاهرة بالمتر؟",
+      "answer": 187,
+      "unit": "meters",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_013",
+      "category": "🇪🇬 مصر",
+      "question": "في أي سنة افتُتح برج القاهرة؟",
+      "answer": 1961,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_014",
+      "category": "🇪🇬 مصر",
+      "question": "كم يبلغ طول خليج السويس تقريبًا بالكيلومتر؟",
+      "answer": 280,
+      "unit": "km",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_015",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم العزيمة؟",
+      "answer": 1939,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_016",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الأرض؟",
+      "answer": 1970,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_017",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الكيت كات؟",
+      "answer": 1991,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_018",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الإرهاب والكباب؟",
+      "answer": 1992,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_019",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم إسماعيلية رايح جاي؟",
+      "answer": 1997,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_020",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم صعيدي في الجامعة الأمريكية؟",
+      "answer": 1998,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_021",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الممر؟",
+      "answer": 2019,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_022",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الفيل الأزرق 2؟",
+      "answer": 2019,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_023",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم كازابلانكا؟",
+      "answer": 2019,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_024",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الحفيد؟",
+      "answer": 1974,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_025",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم شيء من الخوف؟",
+      "answer": 1969,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_026",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم دعاء الكروان؟",
+      "answer": 1959,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_027",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الباب المفتوح؟",
+      "answer": 1963,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_028",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم بين القصرين؟",
+      "answer": 1964,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_029",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم غزل البنات؟",
+      "answer": 1949,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_030",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة بدأت ثورة 1919؟",
+      "answer": 1919,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_031",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة أُعلنت الجمهورية المصرية؟",
+      "answer": 1953,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_032",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة قامت ثورة يوليو؟",
+      "answer": 1952,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_033",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة تأممّت قناة السويس؟",
+      "answer": 1956,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_034",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة بدأت حرب أكتوبر؟",
+      "answer": 1973,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_035",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة تم توقيع معاهدة السلام المصرية الإسرائيلية؟",
+      "answer": 1979,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_036",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة توفي جمال عبد الناصر؟",
+      "answer": 1970,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_037",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة توفي أنور السادات؟",
+      "answer": 1981,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_038",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة توفي محمد علي باشا؟",
+      "answer": 1849,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_039",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة بدأت الحملة الفرنسية على مصر؟",
+      "answer": 1798,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_040",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة انتهت الحملة الفرنسية على مصر؟",
+      "answer": 1801,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_041",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة دخل عمرو بن العاص مصر؟",
+      "answer": 641,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_042",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة تأسست الدولة الفاطمية في مصر؟",
+      "answer": 969,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_043",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة تأسست جامعة القاهرة؟",
+      "answer": 1908,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_044",
+      "category": "🏺 تاريخ مصر",
+      "question": "في أي سنة بدأ بناء جامع الأزهر؟",
+      "answer": 970,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "note": "بدأ البناء سنة 970م، واكتمل/افتُتح للصلاة سنة 972م تقريبًا.",
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_045",
+      "category": "🌍 جغرافيا",
+      "question": "كم يبلغ ارتفاع جبل إيفرست بالمتر؟",
+      "answer": 8848.86,
+      "unit": "meters",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_046",
+      "category": "🌍 جغرافيا",
+      "question": "كم عدد دول قارة أفريقيا؟",
+      "answer": 54,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_047",
+      "category": "🌍 جغرافيا",
+      "question": "كم عدد دول قارة أمريكا الجنوبية؟",
+      "answer": 12,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_048",
+      "category": "🌍 جغرافيا",
+      "question": "كم عدد دول قارة أوروبا تقريبًا وفق التعريف الشائع؟",
+      "answer": 44,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_049",
+      "category": "🌍 جغرافيا",
+      "question": "كم تبلغ مساحة مصر تقريبًا بالكيلومتر المربع؟",
+      "answer": 1002450,
+      "unit": "km2",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_050",
+      "category": "🌍 جغرافيا",
+      "question": "كم تبلغ مساحة الصحراء الكبرى تقريبًا بالكيلومتر المربع؟",
+      "answer": 9200000,
+      "unit": "km2",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_051",
+      "category": "🌍 جغرافيا",
+      "question": "كم يبلغ طول نهر الأمازون تقريبًا بالكيلومتر؟",
+      "answer": 6400,
+      "unit": "km",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_052",
+      "category": "🌍 جغرافيا",
+      "question": "كم يبلغ عمق بحيرة بايكال تقريبًا بالمتر؟",
+      "answer": 1642,
+      "unit": "meters",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_053",
+      "category": "🌍 جغرافيا",
+      "question": "كم تبلغ مساحة جزيرة جرينلاند تقريبًا بالكيلومتر المربع؟",
+      "answer": 2166086,
+      "unit": "km2",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_054",
+      "category": "🌍 جغرافيا",
+      "question": "كم يبلغ طول نهر النيل تقريبًا بالكيلومتر؟",
+      "answer": 6650,
+      "unit": "km",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_055",
+      "category": "🌍 جغرافيا",
+      "question": "كم يبلغ ارتفاع جبل كليمنجارو بالمتر؟",
+      "answer": 5895,
+      "unit": "meters",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_056",
+      "category": "🌍 جغرافيا",
+      "question": "كم عدد المحيطات الرئيسية على الأرض؟",
+      "answer": 5,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_057",
+      "category": "🌍 جغرافيا",
+      "question": "كم تبلغ مساحة المحيط الهادئ تقريبًا بالمليون كيلومتر مربع؟",
+      "answer": 165.25,
+      "unit": "million_km2",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_058",
+      "category": "🌍 جغرافيا",
+      "question": "كم يبلغ عدد دول العالم الأعضاء في الأمم المتحدة؟",
+      "answer": 193,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_059",
+      "category": "🌍 جغرافيا",
+      "question": "كم عدد الدول العربية الأعضاء في جامعة الدول العربية؟",
+      "answer": 22,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_060",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد عظام جسم الإنسان البالغ تقريبًا؟",
+      "answer": 206,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_061",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد أسنان الإنسان البالغ عادةً؟",
+      "answer": 32,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_062",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد الكواكب في المجموعة الشمسية؟",
+      "answer": 8,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_063",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد أضلاع الإنسان؟",
+      "answer": 24,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_064",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد حروف الأبجدية العربية؟",
+      "answer": 28,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_065",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد أيام السنة الكبيسة؟",
+      "answer": 366,
+      "unit": "days",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_066",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد أيام السنة العادية؟",
+      "answer": 365,
+      "unit": "days",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_067",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد دقائق اليوم الواحد؟",
+      "answer": 1440,
+      "unit": "minutes",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_068",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد الثواني في الدقيقة؟",
+      "answer": 60,
+      "unit": "seconds",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_069",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد الدول التي تستخدم اليورو كعملة رسمية في منطقة اليورو حاليًا؟",
+      "answer": 21,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_070",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد عناصر الجدول الدوري المعروفة حاليًا؟",
+      "answer": 118,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_071",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد ألوان قوس قزح في التقسيم التقليدي؟",
+      "answer": 7,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_072",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد غرف قلب الإنسان؟",
+      "answer": 4,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_073",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد فصوص الرئة اليمنى؟",
+      "answer": 3,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_074",
+      "category": "🔢 أرقام عامة",
+      "question": "كم عدد فصوص الرئة اليسرى؟",
+      "answer": 2,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_075",
+      "category": "🚀 فضاء",
+      "question": "كم يبعد القمر عن الأرض في المتوسط بالكيلومتر تقريبًا؟",
+      "answer": 384400,
+      "unit": "km",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_076",
+      "category": "🚀 فضاء",
+      "question": "كم تستغرق أشعة الشمس للوصول إلى الأرض تقريبًا بالدقائق؟",
+      "answer": 8.3,
+      "unit": "minutes",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_077",
+      "category": "🚀 فضاء",
+      "question": "كم تبلغ مدة اليوم على كوكب المريخ بالساعات تقريبًا؟",
+      "answer": 24.6,
+      "unit": "hours",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_078",
+      "category": "🚀 فضاء",
+      "question": "كم تبلغ مدة السنة على المريخ بالأيام الأرضية تقريبًا؟",
+      "answer": 687,
+      "unit": "days",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_079",
+      "category": "🚀 فضاء",
+      "question": "كم يبلغ عمر الشمس تقريبًا بالمليار سنة؟",
+      "answer": 4.6,
+      "unit": "billion_years",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_080",
+      "category": "🚀 فضاء",
+      "question": "كم تبلغ سرعة الضوء تقريبًا بالكيلومتر في الثانية؟",
+      "answer": 299792,
+      "unit": "km_per_s",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_081",
+      "category": "🚀 فضاء",
+      "question": "في أي سنة هبط الإنسان لأول مرة على القمر؟",
+      "answer": 1969,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_082",
+      "category": "🚀 فضاء",
+      "question": "كم عدد الأشخاص الذين مشوا على سطح القمر؟",
+      "answer": 12,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_083",
+      "category": "🚀 فضاء",
+      "question": "كم عدد مهمات أبولو التي هبطت بنجاح على سطح القمر؟",
+      "answer": 6,
+      "unit": "number",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_084",
+      "category": "🚀 فضاء",
+      "question": "كم يبلغ قطر الأرض تقريبًا بالكيلومتر؟",
+      "answer": 12742,
+      "unit": "km",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_085",
+      "category": "🏙️ مدن ومعالم مصر",
+      "question": "كم يبلغ ارتفاع هرم خفرع الأصلي تقريبًا بالمتر؟",
+      "answer": 143.5,
+      "unit": "meters",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_087",
+      "category": "🏙️ مدن ومعالم مصر",
+      "question": "كم يبلغ طول كوبري 6 أكتوبر تقريبًا بالكيلومتر؟",
+      "answer": 12.5,
+      "unit": "km",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_088",
+      "category": "🏙️ مدن ومعالم مصر",
+      "question": "في أي سنة أُقيم الافتتاح الرسمي للمتحف المصري الكبير؟",
+      "answer": 2025,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "note": "أقيم حفل الافتتاح الرسمي في 1 نوفمبر 2025، ثم فُتح المتحف للجمهور بالكامل في 4 نوفمبر 2025.",
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_089",
+      "category": "🏙️ مدن ومعالم مصر",
+      "question": "كم يبلغ ارتفاع مسلة الأقصر في باريس بالمتر؟",
+      "answer": 23,
+      "unit": "meters",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_090",
+      "category": "🏙️ مدن ومعالم مصر",
+      "question": "في أي سنة تم نقل معبد أبو سمبل إلى موقعه الحالي واكتمل المشروع؟",
+      "answer": 1968,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_091",
+      "category": "🏙️ مدن ومعالم مصر",
+      "question": "كم يبلغ ارتفاع تمثال رمسيس الثاني في المتحف المصري الكبير تقريبًا بالمتر؟",
+      "answer": 11.3,
+      "unit": "meters",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_092",
+      "category": "🏙️ مدن ومعالم مصر",
+      "question": "كم يبلغ طول ممشى أهل مصر تقريبًا بالكيلومتر في مرحلته الأولى؟",
+      "answer": 1.8,
+      "unit": "km",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_093",
+      "category": "🏙️ مدن ومعالم مصر",
+      "question": "في أي سنة افتُتحت مكتبة الإسكندرية الجديدة؟",
+      "answer": 2002,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_094",
+      "category": "🏙️ مدن ومعالم مصر",
+      "question": "كم يبلغ ارتفاع الهرم الأحمر الأصلي تقريبًا بالمتر؟",
+      "answer": 104,
+      "unit": "meters",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    }
+  ],
+  "review": {
+    "status": "reviewed",
+    "date": "2026-08-11",
+    "checks": [
+      "تم فحص القيم الرقمية والتواريخ والصياغة.",
+      "تم تصحيح طول قناة السويس إلى 193.3 كم.",
+      "تم تصحيح ارتفاع الهرم الأكبر الأصلي إلى 146.5 م.",
+      "تم توضيح الفرق بين بدء بناء جامع الأزهر وافتتاحه.",
+      "تم توضيح أن 2025 هو عام الافتتاح الرسمي للمتحف المصري الكبير، مع ذكر أن الفتح الكامل للجمهور كان في 4 نوفمبر 2025.",
+      "تم توضيح أن عدد خطوط مترو القاهرة العاملة حتى 2026 هو 3.",
+      "تم حذف سؤال غير موثق بشكل كافٍ من النسخة الأصلية."
+    ],
+    "sources_used": [
+      "Suez Canal Authority",
+      "Ministry of Tourism and Antiquities – Great Pyramid",
+      "Cairo Governorate – Cairo Tower",
+      "Cairo Metro official website",
+      "UNESCO – Grand Egyptian Museum",
+      "Egyptian government sources"
+    ]
+  }
 }

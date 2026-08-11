@@ -45,7 +45,7 @@ export function Top10Screen() {
   const check = () => {
     const value = normalizeAnswer(guess);
     if (!value) return;
-    const idx = list.items.findIndex((item) => normalizeAnswer(item) === value);
+    const idx = list.items.findIndex((item) => normalizeAnswer(item.name) === value);
     if (idx === -1) {
       setFeedback("wrong");
       playSfx("wrong", settings.sound);
@@ -92,7 +92,7 @@ export function Top10Screen() {
               >
                 <span className="flex items-center gap-3">
                   <span className="w-6 font-extrabold text-primary">{i + 1}.</span>
-                  <span className="font-bold">{top10.revealed[i] ? item : "؟؟؟؟"}</span>
+                  <span className="font-bold">{top10.revealed[i] ? item.name : "؟؟؟؟"}</span>
                 </span>
                 <span className="text-sm font-bold text-muted-foreground">{i + 1} نقطة</span>
               </li>
@@ -141,7 +141,7 @@ export function Top10Screen() {
         title="مين اللي جاوب؟"
         description={
           pendingIndex !== null
-            ? `${list.items[pendingIndex]} — المركز ${pendingIndex + 1} (+${pendingIndex + 1})`
+            ? `${list.items[pendingIndex]?.name} — المركز ${pendingIndex + 1} (+${pendingIndex + 1})`
             : ""
         }
         cancelLabel="من غير نقاط"

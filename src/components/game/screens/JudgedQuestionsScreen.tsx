@@ -13,7 +13,7 @@ export function JudgedQuestionsScreen({ mode }: { mode: "closest" | "different" 
   if (!state) return null;
   const total = state.questions.length;
   const current = state.questions[state.index] as
-    | { question: string; answer?: string }
+    | { question: string; answer?: string | number; unit?: string }
     | undefined;
   const isLast = state.index >= total - 1;
 
@@ -32,6 +32,14 @@ export function JudgedQuestionsScreen({ mode }: { mode: "closest" | "different" 
     mode === "closest"
       ? "الحكم بياخد التخمينات من اللاعبين، والأقرب يكسب."
       : "الحكم بيسمع الإجابات، واللي إجابته مختلفة يكسب.";
+
+  const formatAnswer = (ans: string | number, unit?: string) => {
+    if (!unit || unit === "year" || unit === "number") return ans;
+    if (unit === "meters") return `${ans} متر`;
+    if (unit === "km") return `${ans} كم`;
+    if (unit === "km2") return `${ans} كم²`;
+    return `${ans} ${unit}`;
+  };
 
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-8">
@@ -60,7 +68,7 @@ export function JudgedQuestionsScreen({ mode }: { mode: "closest" | "different" 
               <div className="mt-8">
                 {showAnswer ? (
                   <p className="rounded-lg border border-success/50 bg-success/15 px-4 py-3 text-2xl font-extrabold text-success">
-                    الإجابة: {current.answer}
+                    الإجابة: {formatAnswer(current.answer!, current.unit)}
                   </p>
                 ) : (
                   <Btn variant="outline" onClick={() => setShowAnswer(true)}>

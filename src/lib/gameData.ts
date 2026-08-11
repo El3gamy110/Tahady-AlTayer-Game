@@ -16,9 +16,10 @@ export type TriviaCategory = {
   questions: Record<Difficulty, TriviaQuestion>;
 };
 
-export type ClosestQuestion = { question: string; answer: string };
-export type DifferentQuestion = { question: string };
-export type Top10List = { title: string; items: string[] };
+export type ClosestQuestion = { question: string; answer: string | number; unit?: string };
+export type DifferentQuestion = { id: string; question: string };
+export type Top10Item = { rank: number; name: string; value: number; unit: string };
+export type Top10List = { title: string; items: Top10Item[] };
 
 export const DIFFICULTY_POINTS: Record<Difficulty, number> = {
   easy: 10,
@@ -40,7 +41,28 @@ export function shuffle<T>(items: T[]): T[] {
 }
 
 export function pickTriviaCategories(count = 3): TriviaCategory[] {
-  return shuffle(triviaRaw.categories as TriviaCategory[]).slice(0, count);
+  const rawCategories = shuffle(triviaRaw.categories).slice(0, count);
+  return rawCategories.map((rawCat: any) => {
+    const questions = rawCat.questions as any[];
+    const easyQ = shuffle(questions.filter((q) => q.difficulty === "سهل"))[0];
+    const mediumQ = shuffle(questions.filter((q) => q.difficulty === "متوسط"))[0];
+    const hardQ = shuffle(questions.filter((q) => q.difficulty === "صعب"))[0];
+
+    const formatQ = (q: any): TriviaQuestion => ({
+      question: q.question,
+      choices: q.options,
+      answer: q.options[q.answer],
+    });
+
+    return {
+      name: rawCat.name,
+      questions: {
+        easy: formatQ(easyQ || questions[0]),
+        medium: formatQ(mediumQ || questions[0]),
+        hard: formatQ(hardQ || questions[0]),
+      },
+    };
+  });
 }
 
 export function pickClosestQuestions(count = 5): ClosestQuestion[] {
