@@ -12,7 +12,9 @@ export function JudgedQuestionsScreen({ mode }: { mode: "closest" | "different" 
 
   if (!state) return null;
   const total = state.questions.length;
-  const current = state.questions[state.index];
+  const current = state.questions[state.index] as
+    | { question: string; answer?: string }
+    | undefined;
   const isLast = state.index >= total - 1;
 
   const advance = () => {
