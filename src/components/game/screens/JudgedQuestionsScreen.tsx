@@ -54,11 +54,11 @@ export function JudgedQuestionsScreen({ mode }: { mode: "closest" | "different" 
             <p className="text-sm text-muted-foreground">{hint}</p>
             <h2 className="mt-6 text-4xl font-extrabold leading-snug">{current?.question}</h2>
 
-            {mode === "closest" && "answer" in (current ?? {}) ? (
+            {mode === "closest" && current && "answer" in current ? (
               <div className="mt-8">
                 {showAnswer ? (
                   <p className="rounded-lg border border-success/50 bg-success/15 px-4 py-3 text-2xl font-extrabold text-success">
-                    الإجابة: {(current as { answer: string }).answer}
+                    الإجابة: {current.answer}
                   </p>
                 ) : (
                   <Btn variant="outline" onClick={() => setShowAnswer(true)}>
