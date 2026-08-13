@@ -16,12 +16,15 @@ export function Top10Screen() {
     orderedPlayers,
     settings,
     finishSection,
+    changeTop10List,
+    lockTop10Changes,
   } = useGame();
 
   const [guess, setGuess] = useState("");
   const [feedback, setFeedback] = useState<"wrong" | "duplicate" | null>(null);
   const [pendingIndex, setPendingIndex] = useState<number | null>(null);
   const [surrenderOpen, setSurrenderOpen] = useState(false);
+  const [confirmChangeList, setConfirmChangeList] = useState(false);
 
   if (!top10) return null;
   const list = top10.lists[top10.listIndex]!;
@@ -59,6 +62,7 @@ export function Top10Screen() {
     setFeedback(null);
     setPendingIndex(idx);
     playSfx("reveal", settings.sound);
+    lockTop10Changes();
   };
 
   const goNextList = () => {
@@ -77,7 +81,26 @@ export function Top10Screen() {
 
       <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
         <div className="card-surface p-6">
-          <h2 className="text-2xl sm:text-3xl font-extrabold">{list.title}</h2>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-border pb-4">
+            <h2 className="text-2xl sm:text-3xl font-extrabold">{list.title}</h2>
+            <div className="flex items-center gap-3">
+              {top10.top10ChangesLocked ? (
+                <span className="text-sm font-bold">🔒 القائمة مقفولة</span>
+              ) : top10.top10ChangesRemaining === 0 ? (
+                <span className="text-sm font-bold">🔒 مفيش تغييرات متبقية</span>
+              ) : (
+                <span className="text-sm font-bold">التغييرات المتبقية: {top10.top10ChangesRemaining}</span>
+              )}
+              <Btn
+                size="sm"
+                variant="outline"
+                disabled={top10.top10ChangesLocked || top10.top10ChangesRemaining === 0}
+                onClick={() => setConfirmChangeList(true)}
+              >
+                🔄 تغيير القائمة
+              </Btn>
+            </div>
+          </div>
 
           <ol className="mt-6 space-y-2">
             {list.items.map((item, i) => (
@@ -185,6 +208,24 @@ export function Top10Screen() {
         }}
         onCancel={() => setSurrenderOpen(false)}
       />
+
+      {confirmChangeList && (
+        <Confirm
+          open={true}
+          title="تغيير القائمة دي؟"
+          description="ده هيستهلك 1 من الـ 3 تغييرات المتاحة ليك للفقرة دي."
+          confirmLabel="تغيير"
+          cancelLabel="إلغاء"
+          onConfirm={() => {
+            changeTop10List();
+            setConfirmChangeList(false);
+            setGuess("");
+            setFeedback(null);
+            setPendingIndex(null);
+          }}
+          onCancel={() => setConfirmChangeList(false)}
+        />
+      )}
     </div>
   );
 }

@@ -4,6 +4,8 @@ import {
   pickDifferentQuestions,
   pickTop10Lists,
   pickTriviaCategories,
+  pickSingleTriviaCategory,
+  pickSingleTop10List,
   shuffle,
   type ClosestQuestion,
   type DifferentQuestion,
@@ -38,6 +40,8 @@ export type Settings = { sound: boolean; effects: boolean };
 export type TriviaState = {
   categories: TriviaCategory[];
   used: string[]; // `${catIndex}-${difficulty}`
+  categoryChangesRemaining: number;
+  categoryChangesLocked: boolean;
 };
 
 export type Top10State = {
@@ -46,6 +50,9 @@ export type Top10State = {
   revealed: boolean[];
   scored: boolean[];
   started: boolean;
+  top10ChangesRemaining: number;
+  top10ChangesLocked: boolean;
+  playedLists: string[];
 };
 
 type GameContextValue = {
@@ -68,6 +75,10 @@ type GameContextValue = {
   usePowerUp: (playerId: string, id: PowerUpId) => void;
   openSection: (id: SectionId) => void;
   markTriviaUsed: (key: string) => void;
+  changeTriviaCategory: (index: number) => void;
+  lockTriviaChanges: () => void;
+  changeTop10List: () => void;
+  lockTop10Changes: () => void;
   nextClosest: () => void;
   nextDifferent: () => void;
   revealTop10: (index: number, scored: boolean) => void;
@@ -131,17 +142,28 @@ export function GameProvider({ children }: { children: ReactNode }) {
     const openSection = (id: SectionId) => {
       setCurrentSection(id);
       setTurnOrder((prev) => shuffle(prev));
-      if (id === "trivia") setTrivia({ categories: pickTriviaCategories(3), used: [] });
+      if (id === "trivia")
+        setTrivia({
+          categories: pickTriviaCategories(3),
+          used: [],
+          categoryChangesRemaining: 3,
+          categoryChangesLocked: false,
+        });
       if (id === "closest") setClosest({ questions: pickClosestQuestions(5), index: 0 });
       if (id === "different") setDifferent({ questions: pickDifferentQuestions(5), index: 0 });
-      if (id === "top10")
+      if (id === "top10") {
+        const initialLists = pickTop10Lists(2);
         setTop10({
-          lists: pickTop10Lists(2),
+          lists: initialLists,
           listIndex: 0,
           revealed: Array(10).fill(false),
           scored: Array(10).fill(false),
           started: false,
+          top10ChangesRemaining: 3,
+          top10ChangesLocked: false,
+          playedLists: initialLists.map((l) => l.title),
         });
+      }
       setScreen(id);
     };
 
@@ -207,6 +229,41 @@ export function GameProvider({ children }: { children: ReactNode }) {
       openSection,
       markTriviaUsed: (key) =>
         setTrivia((prev) => (prev ? { ...prev, used: [...prev.used, key] } : prev)),
+      changeTriviaCategory: (index) =>
+        setTrivia((prev) => {
+          if (!prev || prev.categoryChangesRemaining <= 0 || prev.categoryChangesLocked)
+            return prev;
+          const replacement = pickSingleTriviaCategory(prev.categories.map((c) => c.name));
+          if (!replacement) return prev;
+          const newCats = [...prev.categories];
+          newCats[index] = replacement;
+          return {
+            ...prev,
+            categories: newCats,
+            categoryChangesRemaining: prev.categoryChangesRemaining - 1,
+          };
+        }),
+      lockTriviaChanges: () =>
+        setTrivia((prev) => (prev ? { ...prev, categoryChangesLocked: true } : prev)),
+      changeTop10List: () =>
+        setTop10((prev) => {
+          if (!prev || prev.top10ChangesRemaining <= 0 || prev.top10ChangesLocked) return prev;
+          const replacement = pickSingleTop10List(prev.playedLists);
+          if (!replacement) return prev;
+          const newLists = [...prev.lists];
+          newLists[prev.listIndex] = replacement;
+          return {
+            ...prev,
+            lists: newLists,
+            top10ChangesRemaining: prev.top10ChangesRemaining - 1,
+            playedLists: [...prev.playedLists, replacement.title],
+            revealed: Array(10).fill(false),
+            scored: Array(10).fill(false),
+            started: false,
+          };
+        }),
+      lockTop10Changes: () =>
+        setTop10((prev) => (prev ? { ...prev, top10ChangesLocked: true } : prev)),
       nextClosest: () => setClosest((prev) => (prev ? { ...prev, index: prev.index + 1 } : prev)),
       nextDifferent: () =>
         setDifferent((prev) => (prev ? { ...prev, index: prev.index + 1 } : prev)),
@@ -221,19 +278,21 @@ export function GameProvider({ children }: { children: ReactNode }) {
           return { ...prev, revealed, scored: scoredArr };
         }),
       nextTop10List: () => {
-        let hasMore = false;
-        setTop10((prev) => {
-          if (!prev) return prev;
-          hasMore = prev.listIndex + 1 < prev.lists.length;
-          if (!hasMore) return prev;
-          return {
-            ...prev,
-            listIndex: prev.listIndex + 1,
-            revealed: Array(10).fill(false),
-            scored: Array(10).fill(false),
-            started: false,
-          };
-        });
+        if (!top10) return false;
+        const hasMore = top10.listIndex + 1 < top10.lists.length;
+        if (hasMore) {
+          setTop10((prev) => {
+            if (!prev) return prev;
+            return {
+              ...prev,
+              listIndex: prev.listIndex + 1,
+              revealed: Array(10).fill(false),
+              scored: Array(10).fill(false),
+              started: false,
+              top10ChangesLocked: false,
+            };
+          });
+        }
         return hasMore;
       },
       finishSection,

@@ -3,5 +3,5 @@
     <string name="app_name">تحدي عالطاير</string>
     <string name="title_activity_main">تحدي عالطاير</string>
     <string name="package_name">com.lovable.tahadyaltayer</string>
-    <string name="custom_url_scheme">com.lovable.tahadyaltayer</string>
+    <string name="custom_url_scheme">tahadyaltayer</string>
 </resources>
