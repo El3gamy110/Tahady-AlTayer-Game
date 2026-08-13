@@ -1318,6 +1318,1406 @@
       },
       "source_status": "reviewed",
       "source_note": "تمت مراجعة صياغة السؤال والقيمة لتكون مناسبة للإجابة الرقمية."
+    },
+    {
+      "id": "num_095",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم ليلى؟",
+      "answer": 1927,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_096",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الوردة البيضاء؟",
+      "answer": 1933,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_097",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم سلامة في خير؟",
+      "answer": 1937,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_098",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم عنتر وعبلة؟",
+      "answer": 1945,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_099",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم ريا وسكينة؟",
+      "answer": 1952,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_100",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الفتوة؟",
+      "answer": 1957,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_101",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم باب الحديد؟",
+      "answer": 1958,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_102",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم إشاعة حب؟",
+      "answer": 1960,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_103",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الزوجة 13؟",
+      "answer": 1962,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_104",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم أم العروسة؟",
+      "answer": 1963,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_105",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم مراتي مدير عام؟",
+      "answer": 1966,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_106",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم البوسطجي؟",
+      "answer": 1968,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_107",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم المومياء؟",
+      "answer": 1969,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_108",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم ثرثرة فوق النيل؟",
+      "answer": 1971,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_109",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الكرنك؟",
+      "answer": 1975,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_110",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم أفواه وأرانب؟",
+      "answer": 1977,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_111",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم إسكندرية ليه؟؟",
+      "answer": 1979,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_112",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم سواق الأتوبيس؟",
+      "answer": 1982,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_113",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم العار؟",
+      "answer": 1982,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_114",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الكيف؟",
+      "answer": 1985,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_115",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم البرئ؟",
+      "answer": 1986,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_116",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم زوجة رجل مهم؟",
+      "answer": 1987,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_117",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم أحلام هند وكاميليا؟",
+      "answer": 1988,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_118",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الإرهابي؟",
+      "answer": 1994,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_119",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم بخيت وعديلة؟",
+      "answer": 1995,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_120",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم أرض الخوف؟",
+      "answer": 1999,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_121",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الناظر؟",
+      "answer": 2000,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_122",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم الساحر؟",
+      "answer": 2001,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_123",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم تيتو؟",
+      "answer": 2004,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_124",
+      "category": "🎬 السينما المصرية",
+      "question": "في أي سنة عُرض فيلم عمارة يعقوبيان؟",
+      "answer": 2006,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_125",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل ليالي الحلمية؟",
+      "answer": 1987,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_126",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل رأفت الهجان؟",
+      "answer": 1988,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_127",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل المال والبنون؟",
+      "answer": 1992,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_128",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل لن أعيش في جلباب أبي؟",
+      "answer": 1996,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_129",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل حديث الصباح والمساء؟",
+      "answer": 2001,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_130",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل أين قلبي؟",
+      "answer": 2002,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_131",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل عباس الأبيض في اليوم الأسود؟",
+      "answer": 2004,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_132",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل سارة؟",
+      "answer": 2005,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_133",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل يتربى في عزو؟",
+      "answer": 2007,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_134",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل الدالي؟",
+      "answer": 2007,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_135",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل عايزة أتجوز؟",
+      "answer": 2010,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_136",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل الجماعة؟",
+      "answer": 2010,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_137",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل الكبير أوي؟",
+      "answer": 2010,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_138",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل موجة حارة؟",
+      "answer": 2013,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_139",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل ذات؟",
+      "answer": 2013,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_140",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل سجن النسا؟",
+      "answer": 2014,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_141",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل تحت السيطرة؟",
+      "answer": 2015,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_142",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل جراند أوتيل؟",
+      "answer": 2016,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_143",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل الميزان؟",
+      "answer": 2016,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_144",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل هذا المساء؟",
+      "answer": 2017,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_145",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل رحيم؟",
+      "answer": 2018,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_146",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل أبو عمر المصري؟",
+      "answer": 2018,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_147",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل ولد الغلابة؟",
+      "answer": 2019,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_148",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل بـ100 وش؟",
+      "answer": 2020,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_149",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل الاختيار؟",
+      "answer": 2020,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_150",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل لعبة نيوتن؟",
+      "answer": 2021,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_151",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل خلي بالك من زيزي؟",
+      "answer": 2021,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_152",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل راجعين يا هوى؟",
+      "answer": 2022,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_153",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل تحت الوصاية؟",
+      "answer": 2023,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_154",
+      "category": "📺 المسلسلات المصرية",
+      "question": "في أي سنة عُرض مسلسل الحشاشين؟",
+      "answer": 2024,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_155",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Citizen Kane؟",
+      "answer": 1941,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_156",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Casablanca؟",
+      "answer": 1942,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_157",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم It's a Wonderful Life؟",
+      "answer": 1946,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_158",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Bicycle Thieves؟",
+      "answer": 1948,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_159",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Rashomon؟",
+      "answer": 1950,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_160",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Singin' in the Rain؟",
+      "answer": 1952,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_161",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Rear Window؟",
+      "answer": 1954,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_162",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم 12 Angry Men؟",
+      "answer": 1957,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_163",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Vertigo؟",
+      "answer": 1958,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_164",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Psycho؟",
+      "answer": 1960,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_165",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم The Good, the Bad and the Ugly؟",
+      "answer": 1966,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_166",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم 2001: A Space Odyssey؟",
+      "answer": 1968,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_167",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم The Godfather؟",
+      "answer": 1972,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_168",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Jaws؟",
+      "answer": 1975,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_169",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Rocky؟",
+      "answer": 1976,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_170",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Star Wars؟",
+      "answer": 1977,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_171",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Alien؟",
+      "answer": 1979,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_172",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم The Shining؟",
+      "answer": 1980,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_173",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Back to the Future؟",
+      "answer": 1985,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_174",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Die Hard؟",
+      "answer": 1988,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_175",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم The Silence of the Lambs؟",
+      "answer": 1991,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_176",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Jurassic Park؟",
+      "answer": 1993,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_177",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Pulp Fiction؟",
+      "answer": 1994,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_178",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Toy Story؟",
+      "answer": 1995,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_179",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم The Matrix؟",
+      "answer": 1999,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_180",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Gladiator؟",
+      "answer": 2000,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_181",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم The Lord of the Rings: The Fellowship of the Ring؟",
+      "answer": 2001,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_182",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Spirited Away؟",
+      "answer": 2001,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_183",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم The Dark Knight؟",
+      "answer": 2008,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_184",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Inception؟",
+      "answer": 2010,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_185",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Interstellar؟",
+      "answer": 2014,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_186",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Whiplash؟",
+      "answer": 2014,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_187",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Parasite؟",
+      "answer": 2019,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_188",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Dune؟",
+      "answer": 2021,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_189",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Everything Everywhere All at Once؟",
+      "answer": 2022,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_190",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Oppenheimer؟",
+      "answer": 2023,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_191",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Barbie؟",
+      "answer": 2023,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_192",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Get Out؟",
+      "answer": 2017,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_193",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم La La Land؟",
+      "answer": 2016,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
+    },
+    {
+      "id": "num_194",
+      "category": "🌎 سينما عالمية",
+      "question": "في أي سنة عُرض فيلم Mad Max: Fury Road؟",
+      "answer": 2015,
+      "unit": "year",
+      "scoring": {
+        "exact": 2,
+        "closest_if_no_exact": 1,
+        "others": 0
+      },
+      "source_status": "reviewed",
+      "source_note": "تم اختيار السؤال بعد مراجعة الملف الأصلي لتجنب تكرار العناوين الموجودة فيه."
     }
   ],
   "review": {
