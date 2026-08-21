@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useGame, type PowerUpId } from "@/game/store";
 import { Btn, Confirm, GameHeader } from "@/components/game/ui";
 import { Scoreboard } from "@/components/game/Scoreboard";
-import { DIFFICULTY_ORDER, DIFFICULTY_POINTS, type Difficulty } from "@/lib/gameData";
+import { DIFFICULTY_ORDER, DIFFICULTY_POINTS, type Difficulty, getAllTriviaCategories, type TriviaCategory } from "@/lib/gameData";
 import { playSfx } from "@/game/sfx";
 import { cn } from "@/lib/utils";
 
@@ -23,14 +23,62 @@ export function TriviaScreen() {
     usePowerUp,
     settings,
     finishSection,
-    changeTriviaCategory,
-    lockTriviaChanges,
+    setTriviaCategories,
   } = useGame();
   const [selected, setSelected] = useState<{ cat: number; diff: Difficulty } | null>(null);
   const [turnIndex, setTurnIndex] = useState(0);
-  const [confirmChangeIndex, setConfirmChangeIndex] = useState<number | null>(null);
+
+  const allCategories = useMemo(() => getAllTriviaCategories(), []);
+  const [selectedCats, setSelectedCats] = useState<TriviaCategory[]>([]);
 
   if (!trivia) return null;
+
+  if (trivia.categories.length === 0) {
+    const toggle = (cat: TriviaCategory) => {
+      setSelectedCats((prev) =>
+        prev.some((c) => c.name === cat.name)
+          ? prev.filter((c) => c.name !== cat.name)
+          : prev.length < 3
+            ? [...prev, cat]
+            : prev,
+      );
+    };
+
+    return (
+      <div className="mx-auto w-full max-w-6xl px-4 py-8 text-center">
+        <h2 className="text-3xl font-extrabold mb-2">اختر 3 فئات</h2>
+        <p className="text-muted-foreground mb-6 font-bold">تم الاختيار: {selectedCats.length} / 3</p>
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-8">
+          {allCategories.map((cat) => {
+            const isSelected = selectedCats.some((c) => c.name === cat.name);
+            const isDisabled = !isSelected && selectedCats.length >= 3;
+            return (
+              <button
+                key={cat.name}
+                disabled={isDisabled}
+                onClick={() => toggle(cat)}
+                className={cn(
+                  "p-4 rounded-xl border-2 transition-all font-bold text-lg",
+                  isSelected
+                    ? "border-primary bg-primary/20 text-primary"
+                    : "border-border bg-secondary/40 hover:border-primary/50",
+                  isDisabled && "opacity-50 cursor-not-allowed"
+                )}
+              >
+                {cat.name}
+              </button>
+            );
+          })}
+        </div>
+        {selectedCats.length === 3 && (
+          <Btn size="lg" className="animate-pop-in" onClick={() => setTriviaCategories(selectedCats)}>
+            🎮 ابدأ اللعب
+          </Btn>
+        )}
+      </div>
+    );
+  }
+
   const totalCards = trivia.categories.length * 3;
 
   if (trivia.used.length >= totalCards && !selected) {
@@ -71,28 +119,12 @@ export function TriviaScreen() {
               <p>
                 الدور على: <span className="text-primary">{activePlayer?.name ?? "—"}</span>
               </p>
-              {trivia.categoryChangesLocked ? (
-                <p>🔒 التغيير مقفول</p>
-              ) : trivia.categoryChangesRemaining === 0 ? (
-                <p>🔒 مفيش تغييرات متبقية</p>
-              ) : (
-                <p>التغييرات المتبقية: {trivia.categoryChangesRemaining}</p>
-              )}
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
               {trivia.categories.map((cat, ci) => (
                 <div key={cat.name} className="space-y-3">
                   <div className="rounded-lg bg-secondary/60 p-2 text-center">
                     <h3 className="font-extrabold">{cat.name}</h3>
-                    <Btn
-                      size="sm"
-                      variant="ghost"
-                      className="mt-2 w-full text-xs text-muted-foreground hover:text-foreground"
-                      disabled={trivia.categoryChangesLocked || trivia.categoryChangesRemaining === 0}
-                      onClick={() => setConfirmChangeIndex(ci)}
-                    >
-                      🔄 تغيير الفئة
-                    </Btn>
                   </div>
                   {DIFFICULTY_ORDER.map((d) => {
                     const used = trivia.used.includes(`${ci}-${d}`);
@@ -102,7 +134,6 @@ export function TriviaScreen() {
                         disabled={used}
                         onClick={() => {
                           playSfx("select", settings.sound);
-                          lockTriviaChanges();
                           setSelected({ cat: ci, diff: d });
                         }}
                         className={cn(
@@ -125,21 +156,6 @@ export function TriviaScreen() {
           </div>
           <Scoreboard />
         </div>
-      )}
-
-      {confirmChangeIndex !== null && (
-        <Confirm
-          open={true}
-          title="تغيير الفئة دي؟"
-          description="ده هيستهلك 1 من الـ 3 تغييرات المتاحة ليك."
-          confirmLabel="تغيير"
-          cancelLabel="إلغاء"
-          onConfirm={() => {
-            changeTriviaCategory(confirmChangeIndex);
-            setConfirmChangeIndex(null);
-          }}
-          onCancel={() => setConfirmChangeIndex(null)}
-        />
       )}
     </div>
   );

@@ -40,9 +40,8 @@ export function shuffle<T>(items: T[]): T[] {
   return copy;
 }
 
-export function pickTriviaCategories(count = 3): TriviaCategory[] {
-  const rawCategories = shuffle(triviaRaw.categories).slice(0, count);
-  return rawCategories.map((rawCat: any) => {
+export function getAllTriviaCategories(): TriviaCategory[] {
+  return triviaRaw.categories.map((rawCat: any) => {
     const questions = rawCat.questions as any[];
     const easyQ = shuffle(questions.filter((q) => q.difficulty === "سهل"))[0];
     const mediumQ = shuffle(questions.filter((q) => q.difficulty === "متوسط"))[0];
@@ -65,31 +64,6 @@ export function pickTriviaCategories(count = 3): TriviaCategory[] {
   });
 }
 
-export function pickSingleTriviaCategory(excludeNames: string[]): TriviaCategory | null {
-  const available = triviaRaw.categories.filter((c: any) => !excludeNames.includes(c.name));
-  if (available.length === 0) return null;
-  const rawCat = shuffle(available)[0] as any;
-  const questions = rawCat.questions as any[];
-  const easyQ = shuffle(questions.filter((q: any) => q.difficulty === "سهل"))[0];
-  const mediumQ = shuffle(questions.filter((q: any) => q.difficulty === "متوسط"))[0];
-  const hardQ = shuffle(questions.filter((q: any) => q.difficulty === "صعب"))[0];
-
-  const formatQ = (q: any): TriviaQuestion => ({
-    question: q.question,
-    choices: q.options,
-    answer: q.options[q.answer],
-  });
-
-  return {
-    name: rawCat.name,
-    questions: {
-      easy: formatQ(easyQ || questions[0]),
-      medium: formatQ(mediumQ || questions[0]),
-      hard: formatQ(hardQ || questions[0]),
-    },
-  };
-}
-
 export function pickClosestQuestions(count = 5): ClosestQuestion[] {
   return shuffle(closestRaw.questions as ClosestQuestion[]).slice(0, count);
 }
@@ -98,14 +72,8 @@ export function pickDifferentQuestions(count = 5): DifferentQuestion[] {
   return shuffle(differentRaw.questions as DifferentQuestion[]).slice(0, count);
 }
 
-export function pickTop10Lists(count = 2): Top10List[] {
-  return shuffle(top10Raw.lists as Top10List[]).slice(0, count);
-}
-
-export function pickSingleTop10List(excludeTitles: string[]): Top10List | null {
-  const available = (top10Raw.lists as Top10List[]).filter((l) => !excludeTitles.includes(l.title));
-  if (available.length === 0) return null;
-  return shuffle(available)[0]!;
+export function getAllTop10Lists(): Top10List[] {
+  return top10Raw.lists as Top10List[];
 }
 
 export function normalizeAnswer(value: string): string {

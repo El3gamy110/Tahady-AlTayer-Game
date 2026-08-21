@@ -12,7 +12,7 @@ export function Scoreboard({
   editable?: boolean;
   compact?: boolean;
 }) {
-  const { ranked, adjustScore, lastChangedPlayer } = useGame();
+  const { rankedBySection, adjustScore, lastChangedPlayer } = useGame();
   const [customValue, setCustomValue] = useState("");
   const [target, setTarget] = useState<string>("");
   const [open, setOpen] = useState(true);
@@ -30,7 +30,7 @@ export function Scoreboard({
       </div>
 
       <div className={cn("mt-3 space-y-2", !open && "hidden md:block")}>
-        {ranked.map((p, i) => (
+        {rankedBySection.map((p, i) => (
           <div
             key={p.id}
             className={cn(
@@ -38,9 +38,14 @@ export function Scoreboard({
               lastChangedPlayer === p.id && "border-primary bg-primary/10",
             )}
           >
-            <div className="flex items-center gap-2">
-              <span className="w-6 text-center text-sm">{MEDALS[i] ?? i + 1}</span>
-              <span className="font-bold">{p.name}</span>
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2">
+                <span className="w-6 text-center text-sm">{MEDALS[i] ?? i + 1}</span>
+                <span className="font-bold">{p.name}</span>
+              </div>
+              <span className="text-xs text-muted-foreground mt-0.5 ms-8 font-bold">
+                🏆 {p.sectionsWon} جولات
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <span
@@ -49,7 +54,7 @@ export function Scoreboard({
                   lastChangedPlayer === p.id && "animate-score-bump",
                 )}
               >
-                {p.score}
+                {p.currentSectionScore}
               </span>
               {editable && !compact ? (
                 <div className="flex gap-1">
@@ -78,7 +83,7 @@ export function Scoreboard({
                 className="flex-1 rounded-md border border-input bg-background px-2 py-1.5 text-sm"
               >
                 <option value="">اختر لاعب</option>
-                {ranked.map((p) => (
+                {rankedBySection.map((p) => (
                   <option key={p.id} value={p.id}>
                     {p.name}
                   </option>

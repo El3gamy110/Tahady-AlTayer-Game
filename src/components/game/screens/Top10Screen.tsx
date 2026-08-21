@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useGame } from "@/game/store";
 import { Btn, Confirm, GameHeader } from "@/components/game/ui";
 import { Scoreboard } from "@/components/game/Scoreboard";
-import { normalizeAnswer } from "@/lib/gameData";
+import { normalizeAnswer, getAllTop10Lists, type Top10List } from "@/lib/gameData";
 import { playSfx } from "@/game/sfx";
 import { cn } from "@/lib/utils";
 
@@ -16,17 +16,65 @@ export function Top10Screen() {
     orderedPlayers,
     settings,
     finishSection,
-    changeTop10List,
-    lockTop10Changes,
+    setTop10Lists,
   } = useGame();
 
   const [guess, setGuess] = useState("");
   const [feedback, setFeedback] = useState<"wrong" | "duplicate" | null>(null);
   const [pendingIndex, setPendingIndex] = useState<number | null>(null);
   const [surrenderOpen, setSurrenderOpen] = useState(false);
-  const [confirmChangeList, setConfirmChangeList] = useState(false);
+
+  const allLists = useState(() => getAllTop10Lists())[0];
+  const [selectedLists, setSelectedLists] = useState<Top10List[]>([]);
 
   if (!top10) return null;
+
+  if (top10.lists.length === 0) {
+    const toggle = (list: Top10List) => {
+      setSelectedLists((prev) =>
+        prev.some((l) => l.title === list.title)
+          ? prev.filter((l) => l.title !== list.title)
+          : prev.length < 2
+            ? [...prev, list]
+            : prev,
+      );
+    };
+
+    return (
+      <div className="mx-auto w-full max-w-6xl px-4 py-8 text-center">
+        <h2 className="text-3xl font-extrabold mb-2">اختر قائمتين</h2>
+        <p className="text-muted-foreground mb-6 font-bold">تم الاختيار: {selectedLists.length} / 2</p>
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 mb-8">
+          {allLists.map((list) => {
+            const isSelected = selectedLists.some((l) => l.title === list.title);
+            const isDisabled = !isSelected && selectedLists.length >= 2;
+            return (
+              <button
+                key={list.title}
+                disabled={isDisabled}
+                onClick={() => toggle(list)}
+                className={cn(
+                  "p-4 rounded-xl border-2 transition-all font-bold text-lg",
+                  isSelected
+                    ? "border-primary bg-primary/20 text-primary"
+                    : "border-border bg-secondary/40 hover:border-primary/50",
+                  isDisabled && "opacity-50 cursor-not-allowed"
+                )}
+              >
+                {list.title}
+              </button>
+            );
+          })}
+        </div>
+        {selectedLists.length === 2 && (
+          <Btn size="lg" className="animate-pop-in" onClick={() => setTop10Lists(selectedLists)}>
+            ▶️ ابدأ الفقرة
+          </Btn>
+        )}
+      </div>
+    );
+  }
+
   const list = top10.lists[top10.listIndex]!;
   const remaining = top10.revealed.filter((r) => !r).length;
   const isLastList = top10.listIndex + 1 >= top10.lists.length;
@@ -62,7 +110,6 @@ export function Top10Screen() {
     setFeedback(null);
     setPendingIndex(idx);
     playSfx("reveal", settings.sound);
-    lockTop10Changes();
   };
 
   const goNextList = () => {
@@ -83,23 +130,6 @@ export function Top10Screen() {
         <div className="card-surface p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-border pb-4">
             <h2 className="text-2xl sm:text-3xl font-extrabold">{list.title}</h2>
-            <div className="flex items-center gap-3">
-              {top10.top10ChangesLocked ? (
-                <span className="text-sm font-bold">🔒 القائمة مقفولة</span>
-              ) : top10.top10ChangesRemaining === 0 ? (
-                <span className="text-sm font-bold">🔒 مفيش تغييرات متبقية</span>
-              ) : (
-                <span className="text-sm font-bold">التغييرات المتبقية: {top10.top10ChangesRemaining}</span>
-              )}
-              <Btn
-                size="sm"
-                variant="outline"
-                disabled={top10.top10ChangesLocked || top10.top10ChangesRemaining === 0}
-                onClick={() => setConfirmChangeList(true)}
-              >
-                🔄 تغيير القائمة
-              </Btn>
-            </div>
           </div>
 
           <ol className="mt-6 space-y-2">
@@ -208,24 +238,6 @@ export function Top10Screen() {
         }}
         onCancel={() => setSurrenderOpen(false)}
       />
-
-      {confirmChangeList && (
-        <Confirm
-          open={true}
-          title="تغيير القائمة دي؟"
-          description="ده هيستهلك 1 من الـ 3 تغييرات المتاحة ليك للفقرة دي."
-          confirmLabel="تغيير"
-          cancelLabel="إلغاء"
-          onConfirm={() => {
-            changeTop10List();
-            setConfirmChangeList(false);
-            setGuess("");
-            setFeedback(null);
-            setPendingIndex(null);
-          }}
-          onCancel={() => setConfirmChangeList(false)}
-        />
-      )}
     </div>
   );
 }

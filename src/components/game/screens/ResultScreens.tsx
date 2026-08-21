@@ -6,7 +6,7 @@ import { playSfx } from "@/game/sfx";
 const MEDALS = ["🥇", "🥈", "🥉"];
 
 export function RoundResultScreen() {
-  const { ranked, setScreen, settings, playedSections } = useGame();
+  const { rankedBySection, setScreen, settings, playedSections } = useGame();
   const [endOpen, setEndOpen] = useState(false);
   const allPlayed = playedSections.length >= 4;
 
@@ -19,7 +19,7 @@ export function RoundResultScreen() {
       <h2 className="text-4xl font-extrabold">🎉 الفقرة خلصت!</h2>
 
       <div className="card-surface animate-pop-in mt-8 p-6 text-right">
-        {ranked.map((p, i) => (
+        {rankedBySection.map((p, i) => (
           <div
             key={p.id}
             className="flex items-center justify-between border-b border-border/60 py-3 last:border-0"
@@ -28,7 +28,7 @@ export function RoundResultScreen() {
               <span className="w-6">{MEDALS[i] ?? i + 1}</span>
               {p.name}
             </span>
-            <span className="text-2xl font-extrabold text-primary">{p.score}</span>
+            <span className="text-2xl font-extrabold text-primary">{p.currentSectionScore}</span>
           </div>
         ))}
       </div>
@@ -59,8 +59,8 @@ export function RoundResultScreen() {
 }
 
 export function FinalResultScreen() {
-  const { ranked, playAgain, resetGame, settings } = useGame();
-  const winner = ranked[0];
+  const { rankedByGlobal, playAgain, resetGame, settings } = useGame();
+  const winner = rankedByGlobal[0];
 
   useEffect(() => {
     playSfx("winner", settings.sound);
@@ -71,10 +71,10 @@ export function FinalResultScreen() {
       <div className="animate-pop-in text-7xl">🏆</div>
       <p className="mt-4 text-lg text-muted-foreground">الفائز!</p>
       <h2 className="text-gold-gradient mt-2 text-6xl font-extrabold">{winner?.name ?? "—"}</h2>
-      <p className="mt-2 text-3xl font-extrabold text-primary">{winner?.score ?? 0} نقطة</p>
+      <p className="mt-2 text-3xl font-extrabold text-primary">{winner?.sectionsWon ?? 0} جولات</p>
 
       <div className="card-surface mt-10 p-6 text-right">
-        {ranked.map((p, i) => (
+        {rankedByGlobal.map((p, i) => (
           <div
             key={p.id}
             className="flex items-center justify-between border-b border-border/60 py-3 last:border-0"
@@ -83,7 +83,7 @@ export function FinalResultScreen() {
               <span className="w-6">{MEDALS[i] ?? i + 1}</span>
               {p.name}
             </span>
-            <span className="text-xl font-extrabold text-primary">{p.score}</span>
+            <span className="text-xl font-extrabold text-primary">{p.sectionsWon} جولات</span>
           </div>
         ))}
       </div>

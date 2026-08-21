@@ -2,10 +2,6 @@ import { createContext, useContext, useMemo, useState, type ReactNode } from "re
 import {
   pickClosestQuestions,
   pickDifferentQuestions,
-  pickTop10Lists,
-  pickTriviaCategories,
-  pickSingleTriviaCategory,
-  pickSingleTop10List,
   shuffle,
   type ClosestQuestion,
   type DifferentQuestion,
@@ -20,7 +16,8 @@ export type PowerUpId = "fiftyFifty" | "extraTime" | "doublePoints";
 export type Player = {
   id: string;
   name: string;
-  score: number;
+  currentSectionScore: number;
+  sectionsWon: number;
   powerUps: Record<PowerUpId, boolean>; // true = still available
 };
 
@@ -40,8 +37,6 @@ export type Settings = { sound: boolean; effects: boolean };
 export type TriviaState = {
   categories: TriviaCategory[];
   used: string[]; // `${catIndex}-${difficulty}`
-  categoryChangesRemaining: number;
-  categoryChangesLocked: boolean;
 };
 
 export type Top10State = {
@@ -50,9 +45,6 @@ export type Top10State = {
   revealed: boolean[];
   scored: boolean[];
   started: boolean;
-  top10ChangesRemaining: number;
-  top10ChangesLocked: boolean;
-  playedLists: string[];
 };
 
 type GameContextValue = {
@@ -75,10 +67,8 @@ type GameContextValue = {
   usePowerUp: (playerId: string, id: PowerUpId) => void;
   openSection: (id: SectionId) => void;
   markTriviaUsed: (key: string) => void;
-  changeTriviaCategory: (index: number) => void;
-  lockTriviaChanges: () => void;
-  changeTop10List: () => void;
-  lockTop10Changes: () => void;
+  setTriviaCategories: (cats: TriviaCategory[]) => void;
+  setTop10Lists: (lists: Top10List[]) => void;
   nextClosest: () => void;
   nextDifferent: () => void;
   revealTop10: (index: number, scored: boolean) => void;
@@ -88,7 +78,8 @@ type GameContextValue = {
   resetGame: () => void;
   playAgain: () => void;
   orderedPlayers: Player[];
-  ranked: Player[];
+  rankedBySection: Player[];
+  rankedByGlobal: Player[];
 };
 
 const GameContext = createContext<GameContextValue | null>(null);
@@ -122,7 +113,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
       const next = names.map((name, i) => ({
         id: `p${i}-${Math.random().toString(36).slice(2, 7)}`,
         name: name.trim(),
-        score: 0,
+        currentSectionScore: 0,
+        sectionsWon: 0,
         powerUps: freshPowerUps(),
       }));
       setPlayers(next);
@@ -133,7 +125,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
 
     const adjustScore = (playerId: string, delta: number) => {
       setPlayers((prev) =>
-        prev.map((p) => (p.id === playerId ? { ...p, score: p.score + delta } : p)),
+        prev.map((p) => (p.id === playerId ? { ...p, currentSectionScore: p.currentSectionScore + delta } : p)),
       );
       setLastChangedPlayer(playerId);
       window.setTimeout(() => setLastChangedPlayer(null), 600);
@@ -142,26 +134,21 @@ export function GameProvider({ children }: { children: ReactNode }) {
     const openSection = (id: SectionId) => {
       setCurrentSection(id);
       setTurnOrder((prev) => shuffle(prev));
+      setPlayers((prev) => prev.map((p) => ({ ...p, currentSectionScore: 0 })));
       if (id === "trivia")
         setTrivia({
-          categories: pickTriviaCategories(3),
+          categories: [],
           used: [],
-          categoryChangesRemaining: 3,
-          categoryChangesLocked: false,
         });
       if (id === "closest") setClosest({ questions: pickClosestQuestions(5), index: 0 });
       if (id === "different") setDifferent({ questions: pickDifferentQuestions(5), index: 0 });
       if (id === "top10") {
-        const initialLists = pickTop10Lists(2);
         setTop10({
-          lists: initialLists,
+          lists: [],
           listIndex: 0,
           revealed: Array(10).fill(false),
           scored: Array(10).fill(false),
           started: false,
-          top10ChangesRemaining: 3,
-          top10ChangesLocked: false,
-          playedLists: initialLists.map((l) => l.title),
         });
       }
       setScreen(id);
@@ -171,6 +158,13 @@ export function GameProvider({ children }: { children: ReactNode }) {
       if (currentSection && !playedSections.includes(currentSection)) {
         setPlayedSections((prev) => [...prev, currentSection]);
       }
+      setPlayers((prev) => {
+        const maxScore = Math.max(...prev.map((p) => p.currentSectionScore));
+        return prev.map((p) => ({
+          ...p,
+          sectionsWon: p.currentSectionScore === maxScore && maxScore > 0 ? p.sectionsWon + 1 : p.sectionsWon,
+        }));
+      });
       setScreen("round");
     };
 
@@ -187,7 +181,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
     };
 
     const playAgain = () => {
-      setPlayers((prev) => prev.map((p) => ({ ...p, score: 0, powerUps: freshPowerUps() })));
+      setPlayers((prev) => prev.map((p) => ({ ...p, currentSectionScore: 0, sectionsWon: 0, powerUps: freshPowerUps() })));
       setPlayedSections([]);
       setCurrentSection(null);
       setTrivia(null);
@@ -229,41 +223,10 @@ export function GameProvider({ children }: { children: ReactNode }) {
       openSection,
       markTriviaUsed: (key) =>
         setTrivia((prev) => (prev ? { ...prev, used: [...prev.used, key] } : prev)),
-      changeTriviaCategory: (index) =>
-        setTrivia((prev) => {
-          if (!prev || prev.categoryChangesRemaining <= 0 || prev.categoryChangesLocked)
-            return prev;
-          const replacement = pickSingleTriviaCategory(prev.categories.map((c) => c.name));
-          if (!replacement) return prev;
-          const newCats = [...prev.categories];
-          newCats[index] = replacement;
-          return {
-            ...prev,
-            categories: newCats,
-            categoryChangesRemaining: prev.categoryChangesRemaining - 1,
-          };
-        }),
-      lockTriviaChanges: () =>
-        setTrivia((prev) => (prev ? { ...prev, categoryChangesLocked: true } : prev)),
-      changeTop10List: () =>
-        setTop10((prev) => {
-          if (!prev || prev.top10ChangesRemaining <= 0 || prev.top10ChangesLocked) return prev;
-          const replacement = pickSingleTop10List(prev.playedLists);
-          if (!replacement) return prev;
-          const newLists = [...prev.lists];
-          newLists[prev.listIndex] = replacement;
-          return {
-            ...prev,
-            lists: newLists,
-            top10ChangesRemaining: prev.top10ChangesRemaining - 1,
-            playedLists: [...prev.playedLists, replacement.title],
-            revealed: Array(10).fill(false),
-            scored: Array(10).fill(false),
-            started: false,
-          };
-        }),
-      lockTop10Changes: () =>
-        setTop10((prev) => (prev ? { ...prev, top10ChangesLocked: true } : prev)),
+      setTriviaCategories: (cats) =>
+        setTrivia((prev) => (prev ? { ...prev, categories: cats } : prev)),
+      setTop10Lists: (lists) =>
+        setTop10((prev) => (prev ? { ...prev, lists } : prev)),
       nextClosest: () => setClosest((prev) => (prev ? { ...prev, index: prev.index + 1 } : prev)),
       nextDifferent: () =>
         setDifferent((prev) => (prev ? { ...prev, index: prev.index + 1 } : prev)),
@@ -289,7 +252,6 @@ export function GameProvider({ children }: { children: ReactNode }) {
               revealed: Array(10).fill(false),
               scored: Array(10).fill(false),
               started: false,
-              top10ChangesLocked: false,
             };
           });
         }
@@ -299,7 +261,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
       resetGame,
       playAgain,
       orderedPlayers,
-      ranked: [...players].sort((a, b) => b.score - a.score),
+      rankedBySection: [...players].sort((a, b) => b.currentSectionScore - a.currentSectionScore),
+      rankedByGlobal: [...players].sort((a, b) => b.sectionsWon - a.sectionsWon),
     };
   }, [
     screen,
