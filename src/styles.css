@@ -1,4 +1,4 @@
-@import "tailwindcss" source(none);
+@import "tailwindcss" ;
 @source "../src";
 @import "tw-animate-css";
 
@@ -143,7 +143,7 @@
     right: -20px;
     bottom: -20px;
     z-index: -1;
-    background: linear-gradient(rgba(30, 30, 47, 0.7), rgba(20, 18, 42, 0.8)), url('/game-show-bg.jpg') no-repeat center center;
+    background: linear-gradient(rgba(30, 30, 47, 0.7), rgba(20, 18, 42, 0.8)), url('/game-show-bg-arcade.jpg') no-repeat center center;
     background-size: cover;
     filter: blur(12px);
   }
