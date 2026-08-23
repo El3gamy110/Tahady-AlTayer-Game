@@ -18,7 +18,7 @@ export function RoundResultScreen() {
     <div className="mx-auto w-full max-w-2xl px-4 py-16 text-center">
       <h2 className="text-4xl font-extrabold">🎉 الفقرة خلصت!</h2>
 
-      <div className="card-surface animate-pop-in mt-8 p-6 text-right">
+      <div className="card-pop animate-pop-in mt-8 p-6 text-right">
         {rankedBySection.map((p, i) => (
           <div
             key={p.id}
@@ -73,7 +73,7 @@ export function FinalResultScreen() {
       <h2 className="text-gold-gradient mt-2 text-6xl font-extrabold">{winner?.name ?? "—"}</h2>
       <p className="mt-2 text-3xl font-extrabold text-primary">{winner?.sectionsWon ?? 0} جولات</p>
 
-      <div className="card-surface mt-10 p-6 text-right">
+      <div className="card-pop mt-10 p-6 text-right">
         {rankedByGlobal.map((p, i) => (
           <div
             key={p.id}

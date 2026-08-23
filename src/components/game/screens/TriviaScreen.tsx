@@ -58,7 +58,7 @@ export function TriviaScreen() {
                 disabled={isDisabled}
                 onClick={() => toggle(cat)}
                 className={cn(
-                  "p-4 rounded-xl border-2 transition-all font-bold text-lg",
+                  "rounded-2xl border-[3px] p-4 text-lg font-extrabold transition-all",
                   isSelected
                     ? "border-primary bg-primary/20 text-primary"
                     : "border-border bg-secondary/40 hover:border-primary/50",
@@ -115,7 +115,7 @@ export function TriviaScreen() {
       ) : (
         <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
           <div>
-            <div className="mb-4 flex flex-wrap gap-4 items-center justify-between rounded-lg border border-primary/40 bg-primary/10 px-4 py-2 font-bold">
+            <div className="mb-4 flex flex-wrap items-center justify-between gap-4 rounded-2xl border-[3px] border-primary/50 bg-primary/10 px-4 py-2 font-extrabold">
               <p>
                 الدور على: <span className="text-primary">{activePlayer?.name ?? "—"}</span>
               </p>
@@ -123,7 +123,7 @@ export function TriviaScreen() {
             <div className="grid gap-4 sm:grid-cols-3">
               {trivia.categories.map((cat, ci) => (
                 <div key={cat.name} className="space-y-3">
-                  <div className="rounded-lg bg-secondary/60 p-2 text-center">
+                  <div className="rounded-2xl border-[3px] border-border bg-[image:var(--gradient-purple)] p-2 text-center">
                     <h3 className="font-extrabold">{cat.name}</h3>
                   </div>
                   {DIFFICULTY_ORDER.map((d) => {
@@ -137,10 +137,10 @@ export function TriviaScreen() {
                           setSelected({ cat: ci, diff: d });
                         }}
                         className={cn(
-                          "card-surface w-full py-6 text-2xl sm:text-3xl font-extrabold transition-all duration-200",
+                          "card-pop w-full py-6 text-2xl sm:text-3xl font-extrabold transition-all duration-150",
                           used
                             ? "opacity-30"
-                            : "text-primary hover:-translate-y-1 hover:border-primary hover:shadow-[var(--shadow-glow)]",
+                            : "text-primary hover:border-primary active:translate-y-1",
                         )}
                       >
                         {DIFFICULTY_POINTS[d]}
@@ -220,7 +220,7 @@ function QuestionView({
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
-      <div className="card-surface animate-pop-in p-6">
+      <div className="card-pop animate-pop-in p-6">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <span className="rounded-full bg-accent/15 px-3 py-1 text-sm font-bold text-accent">
             {category.name} · {DIFF_LABEL[difficulty]}

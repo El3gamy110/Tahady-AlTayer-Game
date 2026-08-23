@@ -60,7 +60,7 @@ export function JudgedQuestionsScreen({ mode }: { mode: "closest" | "different" 
             ))}
           </div>
 
-          <div className="card-surface animate-pop-in p-8" key={state.index}>
+          <div className="card-pop animate-pop-in p-8" key={state.index}>
             <p className="text-sm text-muted-foreground">{hint}</p>
             <h2 className="mt-6 text-2xl sm:text-4xl font-extrabold leading-snug">{current?.question}</h2>
 
