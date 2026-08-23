@@ -30,10 +30,10 @@ export function SetupScreen() {
       >
         ← الرئيسية
       </button>
-      <h2 className="text-4xl font-extrabold">إعداد اللعبة</h2>
+      <h2 className="text-gold-gradient text-4xl font-extrabold">إعداد اللعبة</h2>
       <p className="mt-2 text-muted-foreground">اكتب أسامي اللاعبين، والتطبيق هيرتب الأدوار.</p>
 
-      <div className="card-surface mt-6 p-5">
+      <div className="card-pop mt-6 p-5">
         <h3 className="mb-3 font-bold">عدد اللاعبين</h3>
         <div className="flex items-center justify-center gap-6">
           <Btn
@@ -54,7 +54,7 @@ export function SetupScreen() {
         </div>
       </div>
 
-      <div className="card-surface mt-4 p-5">
+      <div className="card-pop mt-4 p-5">
         <h3 className="mb-3 font-bold">أسماء اللاعبين</h3>
         <div className="grid gap-3 sm:grid-cols-2">
           {names.map((name, i) => (
@@ -68,7 +68,7 @@ export function SetupScreen() {
                 setShuffled(false);
               }}
               placeholder={`لاعب ${i + 1}`}
-              className="rounded-lg border border-input bg-background px-3 py-2.5 outline-none transition-colors focus:border-primary"
+              className="rounded-2xl border-[3px] border-input bg-secondary/40 px-4 py-3 font-bold outline-none transition-colors focus:border-primary"
             />
           ))}
         </div>
@@ -81,13 +81,13 @@ export function SetupScreen() {
       </div>
 
       {shuffled && players.length ? (
-        <div className="card-surface animate-pop-in mt-4 p-5">
+        <div className="card-pop animate-pop-in mt-4 p-5">
           <h3 className="mb-3 font-bold">🎲 ترتيب اللعب</h3>
           <ol className="space-y-2">
             {orderedPlayers.map((p, i) => (
               <li
                 key={p.id}
-                className="flex items-center gap-3 rounded-lg bg-secondary/50 px-3 py-2"
+                className="flex items-center gap-3 rounded-2xl border-2 border-border/70 bg-secondary/50 px-3 py-2"
               >
                 <span className="font-extrabold text-primary">{i + 1}.</span>
                 <span className="font-bold">{p.name}</span>
@@ -102,7 +102,7 @@ export function SetupScreen() {
 
       <div className="mt-6 flex flex-wrap gap-3">
         <Btn
-          variant="turquoise"
+          variant="blue"
           disabled={!canShuffle}
           onClick={() => {
             startGame(trimmed);
@@ -111,7 +111,7 @@ export function SetupScreen() {
         >
           🎲 ترتيب اللعب
         </Btn>
-        <Btn size="lg" disabled={!shuffled} onClick={() => setScreen("sections")}>
+        <Btn variant="green" size="lg" disabled={!shuffled} onClick={() => setScreen("sections")}>
           ابدأ التحدي
         </Btn>
       </div>

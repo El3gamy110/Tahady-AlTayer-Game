@@ -18,7 +18,7 @@ export function Scoreboard({
   const [open, setOpen] = useState(true);
 
   return (
-    <aside className="card-surface p-4">
+    <aside className="card-pop p-4">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-extrabold">لوحة النقاط</h3>
         <button
@@ -34,7 +34,7 @@ export function Scoreboard({
           <div
             key={p.id}
             className={cn(
-              "flex flex-wrap items-center justify-between gap-2 rounded-lg border border-border/60 bg-secondary/40 px-3 py-2 transition-colors",
+              "flex flex-wrap items-center justify-between gap-2 rounded-2xl border-[3px] border-border/70 bg-secondary/50 px-3 py-2 transition-colors",
               lastChangedPlayer === p.id && "border-primary bg-primary/10",
             )}
           >
@@ -62,7 +62,7 @@ export function Scoreboard({
                     <button
                       key={d}
                       onClick={() => adjustScore(p.id, d)}
-                      className="h-7 w-8 rounded-md border border-border text-xs font-bold transition-colors hover:border-primary hover:text-primary"
+                      className="h-8 w-9 rounded-xl border-[3px] border-border bg-secondary/60 text-xs font-extrabold transition-colors hover:border-primary hover:text-primary"
                     >
                       {d > 0 ? `+${d}` : d}
                     </button>
@@ -74,13 +74,13 @@ export function Scoreboard({
         ))}
 
         {editable && !compact ? (
-          <div className="mt-3 rounded-lg border border-dashed border-border p-3">
+          <div className="mt-3 rounded-2xl border-2 border-dashed border-border p-3">
             <p className="mb-2 text-xs text-muted-foreground">تعديل مخصص</p>
             <div className="flex flex-wrap gap-2">
               <select
                 value={target}
                 onChange={(e) => setTarget(e.target.value)}
-                className="flex-1 rounded-md border border-input bg-background px-2 py-1.5 text-sm"
+                className="flex-1 rounded-xl border-2 border-input bg-background px-2 py-1.5 text-sm"
               >
                 <option value="">اختر لاعب</option>
                 {rankedBySection.map((p) => (
@@ -94,7 +94,7 @@ export function Scoreboard({
                 onChange={(e) => setCustomValue(e.target.value)}
                 inputMode="numeric"
                 placeholder="±"
-                className="w-20 rounded-md border border-input bg-background px-2 py-1.5 text-sm"
+                className="w-20 rounded-xl border-2 border-input bg-background px-2 py-1.5 text-sm"
               />
               <Btn
                 size="sm"

@@ -127,7 +127,7 @@ export function Top10Screen() {
       />
 
       <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
-        <div className="card-surface p-6">
+        <div className="card-pop p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-border pb-4">
             <h2 className="text-2xl sm:text-3xl font-extrabold">{list.title}</h2>
           </div>
@@ -161,7 +161,7 @@ export function Top10Screen() {
               }}
               onKeyDown={(e) => e.key === "Enter" && check()}
               placeholder="اكتب الإجابة"
-              className="flex-1 rounded-lg border border-input bg-background px-4 py-3 outline-none focus:border-primary"
+              className="flex-1 rounded-2xl border-[3px] border-input bg-background px-4 py-3 outline-none focus:border-primary"
             />
             <Btn onClick={check} disabled={!guess.trim()}>
               تحقق
