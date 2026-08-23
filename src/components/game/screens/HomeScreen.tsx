@@ -14,7 +14,7 @@ export function HomeScreen() {
       <img
         src={logo.url}
         alt="شعار لعبة تحدي عالطاير"
-        className="animate-float h-40 w-40 drop-shadow-[0_16px_24px_rgba(0,0,0,0.55)] sm:h-52 sm:w-52"
+        className="h-40 w-40 drop-shadow-[0_16px_24px_rgba(0,0,0,0.55)] sm:h-52 sm:w-52"
       />
 
       <h1 className="text-gold-gradient mt-6 text-5xl font-extrabold leading-tight sm:text-6xl">
