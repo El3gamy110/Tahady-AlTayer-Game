@@ -118,6 +118,12 @@
     border-color: var(--color-border);
   }
 
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+
   body {
     background: var(--gradient-stage);
     background-attachment: fixed;
@@ -230,4 +236,18 @@
 
 @utility animate-warning {
   animation: pulse-warning 900ms ease-in-out infinite;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@utility animate-float {
+  animation: float-y 4s ease-in-out infinite;
 }
