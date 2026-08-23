@@ -49,7 +49,7 @@ export function getAllTriviaCategories(): TriviaCategory[] {
 
     const formatQ = (q: any): TriviaQuestion => ({
       question: q.question,
-      choices: q.options,
+      choices: shuffle(q.options),
       answer: q.options[q.answer],
     });
 
