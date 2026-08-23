@@ -64,11 +64,11 @@ export function getAllTriviaCategories(): TriviaCategory[] {
   });
 }
 
-export function pickClosestQuestions(count = 5): ClosestQuestion[] {
+export function pickClosestQuestions(count = 8): ClosestQuestion[] {
   return shuffle(closestRaw.questions as ClosestQuestion[]).slice(0, count);
 }
 
-export function pickDifferentQuestions(count = 5): DifferentQuestion[] {
+export function pickDifferentQuestions(count = 8): DifferentQuestion[] {
   return shuffle(differentRaw.questions as DifferentQuestion[]).slice(0, count);
 }
 

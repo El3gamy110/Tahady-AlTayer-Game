@@ -140,8 +140,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
           categories: [],
           used: [],
         });
-      if (id === "closest") setClosest({ questions: pickClosestQuestions(5), index: 0 });
-      if (id === "different") setDifferent({ questions: pickDifferentQuestions(5), index: 0 });
+      if (id === "closest") setClosest({ questions: pickClosestQuestions(8), index: 0 });
+      if (id === "different") setDifferent({ questions: pickDifferentQuestions(8), index: 0 });
       if (id === "top10") {
         setTop10({
           lists: [],
