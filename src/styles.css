@@ -124,12 +124,28 @@
     font-family: var(--font-display);
   }
 
+  #lovable-badge {
+    display: none !important;
+  }
+
   body {
-    background: var(--gradient-stage);
-    background-attachment: fixed;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     min-height: 100vh;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    z-index: -1;
+    background: linear-gradient(rgba(30, 30, 47, 0.7), rgba(20, 18, 42, 0.8)), url('/game-show-bg.jpg') no-repeat center center;
+    background-size: cover;
+    filter: blur(12px);
   }
 }
 
