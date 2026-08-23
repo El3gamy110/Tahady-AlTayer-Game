@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { useGame } from "@/game/store";
 import { playSfx, type SfxName } from "@/game/sfx";
+import logo from "@/assets/logo-tahady.webp.asset.json";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 type BtnProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -71,7 +72,7 @@ export function Confirm({
   if (!open) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 p-4 backdrop-blur-sm">
-      <div className="card-surface animate-pop-in w-full max-w-lg p-6 text-center">
+      <div className="card-pop animate-pop-in w-full max-w-lg p-6 text-center">
         <h3 className="text-2xl font-extrabold">{title}</h3>
         {description ? <p className="mt-2 text-muted-foreground">{description}</p> : null}
         {children ? <div className="mt-4 text-right">{children}</div> : null}
@@ -92,9 +93,12 @@ export function GameHeader({ title, subtitle }: { title: string; subtitle?: stri
   const { setScreen, finishSection } = useGame();
   return (
     <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
-      <div>
+      <div className="flex items-center gap-3">
+        <img src={logo.url} alt="" aria-hidden className="h-12 w-12" />
+        <div>
         <h1 className="text-3xl font-extrabold tracking-tight">{title}</h1>
         {subtitle ? <p className="text-sm text-muted-foreground">{subtitle}</p> : null}
+        </div>
       </div>
       <div className="flex gap-2">
         <Btn variant="outline" size="sm" onClick={() => setScreen("sections")}>
