@@ -5,7 +5,7 @@ const config: CapacitorConfig = {
   appName: 'تحدي عالطاير',
   webDir: '.output/public',
   server: {
-    url: 'https://screen-duplicate-hero.lovable.app',
+    url: 'https://tahady-altayer.lovable.app',
     cleartext: true
   }
 };
