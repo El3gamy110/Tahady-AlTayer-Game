@@ -58,11 +58,11 @@ export function TriviaScreen() {
                 disabled={isDisabled}
                 onClick={() => toggle(cat)}
                 className={cn(
-                  "rounded-2xl border-[3px] p-4 text-lg font-extrabold transition-all",
+                  "btn-3d rounded-2xl p-4 text-lg font-extrabold transition-all duration-150",
                   isSelected
-                    ? "border-primary bg-primary/20 text-primary"
-                    : "border-border bg-secondary/40 hover:border-primary/50",
-                  isDisabled && "opacity-50 cursor-not-allowed"
+                    ? "bg-[image:var(--gradient-cyan)] text-accent-foreground hover:brightness-110 active:translate-y-1 active:shadow-[inset_0_2px_0_rgba(255,255,255,0.4),0_2px_0_rgba(0,0,0,0.35)]"
+                    : "bg-[image:var(--gradient-blue)] text-foreground hover:brightness-110 active:translate-y-1 active:shadow-[inset_0_2px_0_rgba(255,255,255,0.4),0_2px_0_rgba(0,0,0,0.35)]",
+                  isDisabled && "opacity-50 cursor-not-allowed grayscale"
                 )}
               >
                 {cat.name}
@@ -137,10 +137,10 @@ export function TriviaScreen() {
                           setSelected({ cat: ci, diff: d });
                         }}
                         className={cn(
-                          "card-pop w-full py-6 text-2xl sm:text-3xl font-extrabold transition-all duration-150",
+                          "btn-3d w-full py-6 text-2xl sm:text-3xl font-extrabold transition-all duration-150 rounded-2xl",
                           used
-                            ? "opacity-30"
-                            : "text-primary hover:border-primary active:translate-y-1",
+                            ? "opacity-30 bg-secondary/40 text-muted-foreground !shadow-none !border-border"
+                            : "bg-[image:var(--gradient-gold)] text-primary-foreground hover:brightness-110 active:translate-y-1 active:shadow-[inset_0_2px_0_rgba(255,255,255,0.4),0_2px_0_rgba(0,0,0,0.35)]",
                         )}
                       >
                         {DIFFICULTY_POINTS[d]}
@@ -262,11 +262,13 @@ function QuestionView({
                 disabled={!started || isRemoved || finished}
                 onClick={() => pick(c)}
                 className={cn(
-                  "rounded-xl border border-border bg-secondary/40 px-4 py-4 text-lg font-bold transition-all duration-200",
-                  isRemoved && "opacity-20 line-through",
-                  !finished && started && !isRemoved && "hover:border-primary hover:text-primary",
-                  show && isCorrect && "border-success bg-success/20 text-success",
-                  show && !isCorrect && picked === c && "animate-shake border-destructive bg-destructive/20 text-destructive",
+                  "btn-3d rounded-full px-4 py-4 text-lg font-extrabold transition-all duration-150",
+                  isRemoved && "opacity-20 line-through !shadow-none",
+                  !finished && started && !isRemoved && "bg-[image:var(--gradient-purple)] text-foreground hover:brightness-110 active:translate-y-1 active:shadow-[inset_0_2px_0_rgba(255,255,255,0.4),0_2px_0_rgba(0,0,0,0.35)]",
+                  !finished && !started && !isRemoved && "bg-secondary/40 text-foreground !shadow-none !border-border cursor-not-allowed",
+                  show && isCorrect && "bg-[image:var(--gradient-green)] text-foreground !shadow-[inset_0_2px_0_rgba(255,255,255,0.4),0_2px_0_rgba(0,0,0,0.35)]",
+                  show && !isCorrect && picked === c && "animate-shake bg-[image:var(--gradient-red)] text-foreground !shadow-[inset_0_2px_0_rgba(255,255,255,0.4),0_2px_0_rgba(0,0,0,0.35)]",
+                  show && !isCorrect && picked !== c && "bg-secondary/40 text-muted-foreground !shadow-none !border-border"
                 )}
               >
                 {c}

@@ -54,11 +54,11 @@ export function Top10Screen() {
                 disabled={isDisabled}
                 onClick={() => toggle(list)}
                 className={cn(
-                  "p-4 rounded-xl border-2 transition-all font-bold text-lg",
+                  "btn-3d rounded-2xl p-4 text-lg font-extrabold transition-all duration-150",
                   isSelected
-                    ? "border-primary bg-primary/20 text-primary"
-                    : "border-border bg-secondary/40 hover:border-primary/50",
-                  isDisabled && "opacity-50 cursor-not-allowed"
+                    ? "bg-[image:var(--gradient-cyan)] text-accent-foreground hover:brightness-110 active:translate-y-1 active:shadow-[inset_0_2px_0_rgba(255,255,255,0.4),0_2px_0_rgba(0,0,0,0.35)]"
+                    : "bg-[image:var(--gradient-blue)] text-foreground hover:brightness-110 active:translate-y-1 active:shadow-[inset_0_2px_0_rgba(255,255,255,0.4),0_2px_0_rgba(0,0,0,0.35)]",
+                  isDisabled && "opacity-50 cursor-not-allowed grayscale"
                 )}
               >
                 {list.title}
@@ -137,17 +137,17 @@ export function Top10Screen() {
               <li
                 key={i}
                 className={cn(
-                  "flex items-center justify-between rounded-lg border px-4 py-3 text-lg transition-all duration-200",
+                  "btn-3d flex items-center justify-between rounded-xl px-4 py-3 text-lg font-extrabold transition-all duration-200",
                   top10.revealed[i]
-                    ? "animate-pop-in border-success/50 bg-success/10"
-                    : "border-border bg-secondary/30",
+                    ? "animate-pop-in bg-[image:var(--gradient-green)] text-foreground shadow-[inset_0_2px_0_rgba(255,255,255,0.4),0_2px_0_rgba(0,0,0,0.35)]"
+                    : "bg-secondary/40 text-foreground !shadow-none !border-border cursor-default",
                 )}
               >
                 <span className="flex items-center gap-3">
-                  <span className="w-6 font-extrabold text-primary">{i + 1}.</span>
+                  <span className={cn("w-6 font-extrabold", top10.revealed[i] ? "text-foreground" : "text-primary")}>{i + 1}.</span>
                   <span className="font-bold">{top10.revealed[i] ? item.name : "؟؟؟؟"}</span>
                 </span>
-                <span className="text-sm font-bold text-muted-foreground">{i + 1} نقطة</span>
+                <span className={cn("text-sm font-bold", top10.revealed[i] ? "text-foreground" : "text-muted-foreground")}>{i + 1} نقطة</span>
               </li>
             ))}
           </ol>
