@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useGame } from "@/game/store";
 import { Btn, Confirm } from "@/components/game/ui";
-import logo from "@/assets/logo-tahady.webp.asset.json";
+import logo from "@/assets/icon.png";
 
 export function HomeScreen() {
   const { setScreen, settings, setSettings } = useGame();
@@ -12,7 +12,7 @@ export function HomeScreen() {
       <div className="stage-pattern absolute inset-0 -z-10 opacity-70" aria-hidden />
 
       <img
-        src={logo.url}
+        src={logo}
         alt="شعار لعبة تحدي عالطاير"
         className="h-40 w-40 drop-shadow-[0_16px_24px_rgba(0,0,0,0.55)] sm:h-52 sm:w-52"
       />

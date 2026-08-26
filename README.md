@@ -1,5 +1,8 @@
 # تحدي عالطاير
 
+<div align="center">
+  <img src="assets/icon.png" alt="تحدي عالطاير Logo" width="150" />
+</div>
 A fast-paced interactive game application built with modern web technologies and packaged for mobile platforms.
 
 *"فكّر بسرعة... والعب عالطاير!"*
