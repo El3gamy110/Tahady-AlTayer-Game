@@ -5,7 +5,7 @@ const config: CapacitorConfig = {
   appName: 'تحدي عالطاير',
   webDir: '.output/public',
   server: {
-    url: 'https://tahady-altayer.lovable.app',
+    url: 'https://tahady-al-tayer-game.vercel.app',
     cleartext: true
   }
 };

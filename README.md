@@ -8,6 +8,9 @@ A fast-paced interactive game application built with modern web technologies and
 *"فكّر بسرعة... والعب عالطاير!"*
 *(Think fast... and play on the fly!)*
 
+## Live Demo
+[https://tahady-al-tayer-game.vercel.app/](https://tahady-al-tayer-game.vercel.app/)
+
 ## Overview
 "تحدي عالطاير" is an interactive game where players face multiple rounds of quick challenges. It features:
 - One referee, four rounds
